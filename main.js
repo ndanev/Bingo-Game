@@ -8,7 +8,7 @@ var ticket = [
  function changeStyle1() {
      // change style
      var change = document.getElementById('grid1');
-     change.style.border = "3px dashed rgb(255, 209, 71)";
+     change.style.border = "3px dashed rgb(255, 255, 81)";
  
      for (i = 0; i < 27; i++) {
         document.getElementById('item' + (i + 1)).innerText = Math.floor(Math.random() * 90);
@@ -16,21 +16,6 @@ var ticket = [
      
      
  };
- 
- //function changeStyle2() {
-   //  var change = document.getElementById('grid2');
-     //change.style.border = "3px dashed rgb(255, 209, 71)";
-     
- //};
- 
- //function changeStyle3() {
-   //  var change = document.getElementById('grid3');
-     //change.style.border = "3px dashed rgb(255, 209, 71)";
-     
- //};
- 
- 
- 
  
  // Pulling out numbers
  function numbers(){
