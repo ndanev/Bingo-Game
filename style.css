@@ -3,7 +3,6 @@ body{
     padding: 0;
     font-family: cursive;
     background: #cdece2;
-    
 }
 .header {
     background-color: #68726e;
@@ -23,12 +22,6 @@ h1, h4, h3 {
 }
 .btn-class {
     margin: 20px 20px 20px 20px;
-}
-            
-button {
-
-
-
 }
 .grid-container {
     width: 450px;
@@ -57,8 +50,7 @@ button {
 .demo button {
     width: 200px;
     height: 50px;
-    margin: 0 300px;
-    
+    margin: 0 300px;   
 }
 .demo div {
     width: 400px;
@@ -68,7 +60,16 @@ button {
     font-size: 50px;
     margin: 50px 200px;
     text-align: center;
-    background-color: #86ec56;
-    
+    background-color: #a3c494;
+}
 
+#ball {
+    width: 100px;
+    height: 100px;
+    margin: 100px auto;
+    background: rgb(240, 76, 76);
+    border-radius: 50%;
+    text-align: center;
+    color: yellow;
+    position: absolute;
 }
