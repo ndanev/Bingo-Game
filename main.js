@@ -13,18 +13,14 @@ function showTicket() {
             document.getElementById('item' + (i + 1)).innerHTML = ticket[i];
         }
     }
-    var change = document.getElementById('grid1');
-    change.style.border = "3px dashed rgb(255, 255, 81)";
-
+    var changeBorder = document.getElementById('grid1');
+    changeBorder.style.border = "3px dashed rgb(255, 255, 81)";
 }
 
 // Ticket Generator
 function generateTicket() {
 
-    var countNum1 = 0;
-    
-    // first row
-    for (i = 0; i < 9; i++) {
+    for (i = 0; i < 27; i++) {
         var counter = 0;
         var m = nextNumber();
         if (ticket.includes(m)) {
@@ -32,79 +28,62 @@ function generateTicket() {
         }
         if (m != 0) {
             counter++
-            countNum1++
-            if (countNum1 > 5) {
-                m = 0
-            }
         }
         ticket[i] = m;
-
     }
+    row(0, 9);
+    row(9, 18);
+    row(18, 27);
+}
 
-    var countNum2 = 0;
+// generate ticket rows with parameters x and y
+function row(x, y) {
+    var countNumbers = 0;
 
-    // second row
-    for (j = 9; j < 18; j++) {
-        var counter1 = 0;
+    for (i = x; i < y; i++) {
+        var counter = 0;
         var a = nextNumber();
         if (ticket.includes(a)) {
-            a = 0
+            a = 0;
         }
         if (a != 0) {
-            counter1++
-            countNum2++
-            if (countNum2 > 5) {
+            counter++
+            countNumbers++
+            if (countNumbers > 5) {
                 a = 0
             }
         }
-         ticket[j] = a;
+        ticket[i] = a
     }
-
-    var countNum3 = 0;
-
-    // third row
-    for (k = 18; k < 27; k++) {
-        var counter2 = 0;
-        var b = nextNumber();
-        if (ticket.includes(b)) {
-            b = 0
-        }
-        if (b != 0) {
-            counter2++
-            countNum3++
-            if (countNum3 > 5) {
-                b = 0
-            }
-        }
-        ticket[k] = b
-    }
-
-};
-
+}
 
 
 
 // Pulling out numbers
 function startGame() {
-    var numb = document.getElementById('demo');
-    numb.innerText = Math.floor(Math.random() * 90);
+    var randomNumbers = document.getElementById('demo');
+    randomNumbers.innerText = Math.floor(Math.random() * 90);
 
-    // check for winning number
+    // check for winning numbers
     for (i = 0; i < 27; i++) {
-        if (document.getElementById('item' + (i + 1)).innerText === numb.innerText) {
+        if (document.getElementById('item' + (i + 1)).innerText === randomNumbers.innerText) {
             document.getElementById('item' + (i + 1)).style.backgroundColor = "rgb(0, 255, 128)";
+            document.getElementById('item' + (i + 1)).style.color = "rgb(255, 255, 81)";
         }
+
     }
     setTimeout(startGame, 3000);
-};
+}
 
-// animate
-jQuery(document).ready(function ($) {
+
+// winner animation
+/* jQuery(document).ready(function ($) {
     $('#ball').animate({
         width: 500,
-        height: 500
+        height: 500,
     }, 2000)
-});
+}); */
+
 
 
 

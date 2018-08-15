@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -13,6 +14,7 @@
     <title>Bingo Game</title>
 
 </head>
+
 <body>
 
     <div class="header">
@@ -22,58 +24,66 @@
         </div>
     </div>
 
-    <div class="items">
+    <main class="items">
         <div class="choose-lists">
             <h3>-Choose Your Ticket-</h3>
         </div>
 
         <div class="grid-container" id="grid1">
-                <div id="item1"></div>
-                <div id="item2"></div>
-                <div id="item3"></div>  
-                <div id="item4"></div>
-                <div id="item5"></div>
-                <div id="item6"></div>
-                <div id="item7"></div>
-                <div id="item8"></div>
-                <div id="item9"></div>
-                <div id="item10"></div>
-                <div id="item11"></div>  
-                <div id="item12"></div>
-                <div id="item13"></div>
-                <div id="item14"></div>
-                <div id="item15"></div>
-                <div id="item16"></div>
-                <div id="item17"></div>
-                <div id="item18"></div>
-                <div id="item19"></div>  
-                <div id="item20"></div>
-                <div id="item21"></div>
-                <div id="item22"></div>
-                <div id="item23"></div>
-                <div id="item24"></div>
-                <div id="item25"></div>
-                <div id="item26"></div>
-                <div id="item27"></div>
+            <div id="item1"></div>
+            <div id="item2"></div>
+            <div id="item3"></div>
+            <div id="item4"></div>
+            <div id="item5"></div>
+            <div id="item6"></div>
+            <div id="item7"></div>
+            <div id="item8"></div>
+            <div id="item9"></div>
+            <div id="item10"></div>
+            <div id="item11"></div>
+            <div id="item12"></div>
+            <div id="item13"></div>
+            <div id="item14"></div>
+            <div id="item15"></div>
+            <div id="item16"></div>
+            <div id="item17"></div>
+            <div id="item18"></div>
+            <div id="item19"></div>
+            <div id="item20"></div>
+            <div id="item21"></div>
+            <div id="item22"></div>
+            <div id="item23"></div>
+            <div id="item24"></div>
+            <div id="item25"></div>
+            <div id="item26"></div>
+            <div id="item27"></div>
         </div>
 
         <div id="wrapp">
-                <div id="ball">
-                    <h3>BINGO</h3><br>
-                    <h4>You are WINNER!</h4>
-                    <h2>10.000$</h2>
-                </div>
+            <div id="ball">
+                <h3>BINGO</h3>
+                <br>
+                <h4>You are WINNER!</h4>
+                <h2>$10.000</h2>
             </div>
-
-        <div class="btn-class">
-            <button class="btn btn-success" type="button" onclick="generateTicket(); showTicket();">Generate Ticket</button>     
         </div>
 
-    <div class="demo">
-        <div id="demo"></div>
-        <button type="button" class="btn btn-danger btn-block" onclick="startGame();">START GAME</button>
-    </div>
+        <div class="btn-class">
+            <button class="btn btn-success" type="button" onclick="generateTicket(); showTicket();">Generate Ticket</button>
+        </div>
+
+        <div id="new">
+
+        </div>
+
+        <div class="demo">
+            <div id="demo"></div>
+            <button type="button" class="btn btn-danger btn-block" onclick="startGame();">START GAME</button>
+        </div>
+
+    </main>
 
 
 </body>
+
 </html>
