@@ -19,18 +19,6 @@ function showTicket() {
 
 // Ticket Generator
 function generateTicket() {
-
-    for (i = 0; i < 27; i++) {
-        var counter = 0;
-        var m = nextNumber();
-        if (ticket.includes(m)) {
-            m = 0
-        }
-        if (m != 0) {
-            counter++
-        }
-        ticket[i] = m;
-    }
     row(0, 9);
     row(9, 18);
     row(18, 27);
