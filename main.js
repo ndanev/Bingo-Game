@@ -1,12 +1,13 @@
 var ticket = [];
 
+
 function nextNumber() {
     var n = Math.floor(Math.random() * 90);
     return n;
 }
 
 function showTicket() {
-    for (i = 0; i < 27; i++) {
+    for (i = 0; i < 54; i++) {
         if (ticket[i] === 0) {
             document.getElementById('item' + (i + 1)).innerHTML = "*";
         } else {
@@ -17,12 +18,6 @@ function showTicket() {
     changeBorder.style.border = "3px dashed rgb(255, 255, 81)";
 }
 
-// Ticket Generator
-function generateTicket() {
-    row(0, 9);
-    row(9, 18);
-    row(18, 27);
-}
 
 // generate ticket rows with parameters x and y
 function row(x, y) {
@@ -45,6 +40,31 @@ function row(x, y) {
     }
 }
 
+// Ticket Generator
+function generateTicket(e) {
+    row(0, 9);
+    row(9, 18);
+    row(18, 27);
+    row(27, 36);
+    row(36, 45);
+    row(45, 54);
+}
+
+function winner() {
+    var a = nextNumber();
+    var counter = 0;
+    for (i = 0; i < 9; i++) {
+        var w = document.getElementById('item' + (i + 1));
+        if (w === a) {
+            counter++
+            if (counter == 5) {
+                alert('winner');
+            }
+        }
+    }
+}
+winner();
+
 
 
 // Pulling out numbers
@@ -53,10 +73,11 @@ function startGame() {
     randomNumbers.innerText = Math.floor(Math.random() * 90);
 
     // check for winning numbers
-    for (i = 0; i < 27; i++) {
+    for (i = 0; i < 54; i++) {
         if (document.getElementById('item' + (i + 1)).innerText === randomNumbers.innerText) {
-            document.getElementById('item' + (i + 1)).style.backgroundColor = "rgb(0, 255, 128)";
+            document.getElementById('item' + (i + 1)).style.backgroundColor = "rgb(0, 183, 255)";
             document.getElementById('item' + (i + 1)).style.color = "rgb(255, 255, 81)";
+            //rgb(0, 255, 128)
         }
 
     }
